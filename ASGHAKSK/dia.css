@@ -1,0 +1,113 @@
+#text {
+    position: fixed;
+    top: 10px;
+    left: 300px;
+    border:1px solid #808080;
+    padding: 5px 15px;
+    background: #CCC;
+    opacity: 0.95;
+  }
+  
+  #text #demo {
+    position: absolute;
+      top: 40%;
+      left: 45%;
+      height: 30%;
+      width: 50%;
+  }
+  
+  #text #up {
+    position: absolute;
+      top: 55%;
+      left: 40%;
+      height: 30%;
+      width: 50%;
+  } 
+  #text #down {
+    position: absolute;
+      top: 24%;
+      left: 40%;
+      height: 30%;
+      width: 50%;
+  }
+  
+  #text h2 {
+    text-align: center;
+    line-height: 5px;
+  }
+  
+  #text button {
+    position: absolute;
+      top: 140%;
+      left: 50%;
+      height: 20%;
+      width: 50%;
+      margin: -15% 0 0 -25%;
+  }
+  
+  #controls {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    border:1px solid #808080;
+    padding: 5px 15px;
+    background: #CCC;
+    box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.65);
+    opacity: 0.95;
+  }
+  
+  #intro, #reddit {
+    width: 200px;
+    font-size: 0.9em;
+  }
+  
+  #intro {
+    padding-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  #controls p {
+    margin: 5px 0;
+  }
+  
+  #controls label {
+    display: inline-block;
+    width: 130px;
+    font-size: 0.9em;
+  }
+  
+  #controls input {
+    width: 70px;
+    text-align: center;
+  }
+  #controls select {
+    width: 70px;
+    text-align: center;
+  }
+  #controls #submit, #controls #random, #controls #hide {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    cursor: pointer;
+  }
+  
+  #controls #submit {
+    width: 80px;
+    left: 10px;
+  }
+  
+  #controls #random {
+    width: 70px;
+  }
+  
+  #controls #hide {
+    width: 50px;
+    margin-right: 0;
+  }
+  
+  #controls #shareLine {
+    margin-top: 15px;
+  }
+  
+  #controls #buttonsLine {
+    margin-top: 15px;
+  }
