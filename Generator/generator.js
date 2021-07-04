@@ -1,4 +1,4 @@
-new ClipboardJS('.copy');
+new Clipboard('.copy');
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
