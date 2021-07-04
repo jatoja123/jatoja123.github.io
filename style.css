@@ -1,0 +1,40 @@
+.bigText {
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+    margin-top:2vh;
+    margin-bottom: 2vh;
+    font-size:4vh;
+    padding:2vh;
+}
+
+.titleText {
+    margin-top:4vh;
+    margin-bottom: 4vh;
+    padding:3vh;
+}
+
+.mynav {
+    font-size: 3vh;
+    margin-right:1vw;
+}
+
+.navtitle {
+    font-size: 4vh;
+    padding-left: 0;
+}
+
+.navitem {
+
+}
+
+.btn {
+    font-size:5vh;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+.holder {
+    text-align: center;
+    margin-top:3vh;
+}
