@@ -16,8 +16,17 @@ function generate(){
   for(var j=0;j<text.length;j++){
       var ch=text[j]
 
-    for(i=0;i<chaos;i++){ 
-        ch = ch + "&#x"+ getRandomInt(min,max).toString(16)
+    for(i=0;i<Math.ceil(chaos);i++){ 
+      if(chaos<1){
+        var r=Math.random()
+        console.log(r)
+        if(r>chaos){
+          console.log("c! ",chaos)
+          continue;
+        }
+      }
+
+      ch = ch + "&#x"+ getRandomInt(min,max).toString(16)
     }
     
     final+=ch
