@@ -38,3 +38,21 @@
     text-align: center;
     margin-top:3vh;
 }
+
+.inp {
+    font-size: 4vh;
+    width:30vw;
+    height: 80%;
+}
+
+.inpBtn {
+    font-size: 3vh;
+    height: 80%;
+    line-height: 80%;
+}
+
+.elem {
+    height: 7vh;
+    vertical-align:middle;
+    text-align: center;
+}
