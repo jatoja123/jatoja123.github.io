@@ -56,3 +56,23 @@
     vertical-align:middle;
     text-align: center;
 }
+
+.opt {
+    width: 100vw;
+    height: 10vh;
+    
+}
+
+.text {
+    display: inline-block;
+    font-size:3vh;
+    width: 30vw;
+    padding:1vh;
+    height:6vh;
+}
+
+.smlbtn {
+    font-size:3vh;
+    margin-left:auto;
+    margin-right: auto;
+}
