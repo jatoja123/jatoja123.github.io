@@ -120,7 +120,10 @@ var listy={
     ['Słodziusia', 1],
     ['Urocza', 2],
     ['Niziutka', 1],
-    ['Nie za wysoka ', 1],
+    ['Nie za wysoka', 1],
+    ['Całkiem Przyjemna', 2],
+    ['Fajna', 1],
+    ['Fajniutka', 2]
 ],
 }
 
