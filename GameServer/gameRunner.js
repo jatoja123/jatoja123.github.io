@@ -45,6 +45,8 @@ function runPythonScript(scriptPath, args, callback) {
     });
 }
 
+dozwolone = ['O','#','|','[',']','^','$','X','.',',']
+
 function SendInput(playerInput) {
     if (!pythonProcess) {
         return;
@@ -52,8 +54,11 @@ function SendInput(playerInput) {
 
     for (let i = 0; i < playerInput.length; i++) {
         var ch = playerInput.charAt(i)
-        if((ch >= 'A' && ch <= 'z') || (ch>='0' && ch <= '9')) ;
-        else return
+        if((ch >= 'A' && ch <= 'z') || (ch>='0' && ch <= '9') || dozwolone.includes(ch)) ;
+        else {
+            console.log(ch)
+            return
+        }
     }
 
     pythonProcess.stdin.write(playerInput + "\n");
