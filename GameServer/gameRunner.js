@@ -1,23 +1,33 @@
 const { spawn } = require('child_process');
+index = require("../index.js");
 
 function StartGame(){
-    num = 10
-    runPythonScript('compute.py', [num], (err, result) => {
+    gra1 = ""
+    gra2 = ""
+    runPythonScript('GameServer/main.py', [gra1, gra2], (err, result) => {
         if (err) {
             console.log(err)
         } else {
-            console.log(`Factorial of ${num} is ${result}`);
+            console.log("Odpalono gre pomyślnie");
         }
     })
 }
 
+const stream = require('stream');
+let gameOutput = "not started"
+let pythonProcess = null
+let pythonStdin = null
+
+function GetGameState() {
+    return gameOutput
+}
 
 function runPythonScript(scriptPath, args, callback) {
-    const pythonProcess = spawn('py', [scriptPath].concat(args));
+    pythonProcess = spawn('py', [scriptPath].concat(args));
  
-    let data = '';
     pythonProcess.stdout.on('data', (chunk) => {
-        data += chunk.toString(); // Collect data from Python script
+        gameOutput = chunk.toString(); // Collect data from Python script
+        console.log(`Output: ${chunk.toString()}`)
     });
  
     pythonProcess.stderr.on('data', (error) => {
@@ -30,11 +40,26 @@ function runPythonScript(scriptPath, args, callback) {
             callback(`Error: Script exited with code ${code}`, null);
         } else {
             console.log('Python script executed successfully');
-            callback(null, data);
+            callback(null, gameOutput);
         }
     });
 }
 
+function SendInput(playerInput) {
+    if (!pythonProcess) {
+        return;
+    }
+
+    playerInput.forEach(element => {
+        if(element < 'a' || element > 'z') return;
+    });
+
+    pythonProcess.stdin.write(playerInput + "\n");
+    console.log(`Read input.`);
+}
+
 module.exports = {
-    StartGame
+    StartGame,
+    GetGameState,
+    SendInput
 };
