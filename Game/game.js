@@ -16,14 +16,13 @@ function getGame() {
 window.setInterval(function(){
     getGame()
     document.getElementById("game").value = gameState;
-}, 1000);
+}, 200);
 
 function sendInput() {
     inp = document.getElementById("game-input").value;
     document.getElementById("game-input").value = ""
-    if(inp == "") return
 
-    var a = fetch('/Game/input',{
+    return fetch('/Game/input',{
       method: 'post',
       body: JSON.stringify({
         "data": inp
@@ -32,6 +31,4 @@ function sendInput() {
         "Content-type": "application/json; charset=UTF-8"
       }
     }).then(data => console.log(data.status));
-    console.log(a.body)
-    return a
 }

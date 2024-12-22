@@ -33,12 +33,17 @@
     <p class="bigText">
       Grobowce
     </p>
-    <button type="button btn" class="btn btn-dark" onclick="startGame()">Start</button>
-    <input id="game" disabled value="Tu bedzie gra"/>
-    <p>Wpisuj akcje:</p>
-    <input id="game-input" value=""/>
-    <button type="button btn" class="btn btn-dark" onclick="sendInput()">Input</button>
-    
+    <div style="display: flex; flex-direction: column; justify-content: space-between; padding-left: 10%; padding-right: 10%;">
+      <button type="button" class="btn btn-sm btn-dark fs-4" onclick="startGame()">Restartuj gre</button>
+      <div class="form-floating" style="margin-top: 2%;">
+        <textarea id="game" class="form-control" placeholder="Output" style="height: 33vh; font-family: 'Lucida Console', 'Courier New', monospace;"></textarea>
+      </div>
+      <div class="form-floating" style="margin-bottom: 2%;">
+        <textarea id="game-input" class="form-control" placeholder="Wprowadź..." style="height: 10vh; font-family: 'Lucida Console', 'Courier New', monospace;""></textarea>
+        <label for="game-input">Wpisz akcje</label>
+      </div>
+      <button type="button" class="btn btn-sm btn-dark fs-4" onclick="sendInput()">Wczytaj input</button>
+    </div>
 
   </body>
 </html>

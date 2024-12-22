@@ -50,9 +50,11 @@ function SendInput(playerInput) {
         return;
     }
 
-    playerInput.forEach(element => {
-        if(element < 'a' || element > 'z') return;
-    });
+    for (let i = 0; i < playerInput.length; i++) {
+        var ch = playerInput.charAt(i)
+        if((ch >= 'A' && ch <= 'z') || (ch>='0' && ch <= '9')) ;
+        else return
+    }
 
     pythonProcess.stdin.write(playerInput + "\n");
     console.log(`Read input.`);
